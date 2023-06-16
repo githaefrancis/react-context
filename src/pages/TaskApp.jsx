@@ -1,3 +1,13 @@
+import AddTask from '../components/AddTask';
+import TaskList from '../components/TaskList';
+import { TasksProvider } from '../context/TasksContext';
+
 export default function TaskApp(){
-    return <h1>Task</h1>
+    return (
+        <TasksProvider>
+            <h1>Day off in Kyoto</h1>
+            <AddTask />
+            <TaskList />
+        </TasksProvider>
+    );
 }
